@@ -28,7 +28,7 @@ def send_notification_email(sender, instance, **kwargs):
                 'model': instance.model,
                 'version': instance.version,
             })
-            from_email = os.environ.get('EMAIL_HOST_USER')  # Замените на ваш адрес электронной почты
+            from_email = os.environ.get('EMAIL_HOST_USER')
             recipient_list = [order.customer.email]
             send_mail(subject, message, from_email, recipient_list)
 

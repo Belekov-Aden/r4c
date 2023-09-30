@@ -12,7 +12,6 @@ from openpyxl import Workbook
 
 
 from .models import Robot
-from orders.models import Order
 
 @method_decorator(csrf_exempt, name='dispatch')
 class RobotsView(View):
